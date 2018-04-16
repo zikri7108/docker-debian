@@ -60,8 +60,8 @@ push:
 		docker push $(REGISTRY)/debian-venti:go$$goversion-$(DEBIAN_VERSION) ; \
 	done
 	# FIXME: for compatibility
-	docker tag debian-venti:go1.5.4-$(DEBIAN_VERSION) $(REGISTRY)/debian-venti:0.0.1
-	docker tag debian-venti:go1.5.4-$(DEBIAN_VERSION) $(REGISTRY)/debian-venti:latest
+	# docker tag debian-venti:go1.5.4-$(DEBIAN_VERSION) $(REGISTRY)/debian-venti:0.0.1
+	# docker tag debian-venti:go1.5.4-$(DEBIAN_VERSION) $(REGISTRY)/debian-venti:latest
 	docker tag debian-venti:$(DEBIAN_VERSION) $(REGISTRY)/debian-venti:$(DEBIAN_VERSION)
 	for version in 0.0.1 latest $(DEBIAN_VERSION); do \
 		docker tag debian-tall:$(DEBIAN_VERSION) $(REGISTRY)/debian-tall:$$version && \
